@@ -91,10 +91,6 @@ section {
   min-height: 420px;
 }
 
-section:nth-child(2n) {
-  /* background-color: lightblue; */
-}
-
 .content {
   padding: 0 var(--russet-page-margins);
 }

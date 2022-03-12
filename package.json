@@ -1,0 +1,7 @@
+{
+  "name": "russet.works",
+  "private": true,
+  "devDependencies": {
+    "prettier": "2.5.1"
+  }
+}
