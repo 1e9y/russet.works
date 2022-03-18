@@ -2,18 +2,10 @@
 <html>
   <head>
     <title>Russet</title>
+
     <link rel="stylesheet" href="main.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
-
-<style>
-  #contact-button {
-    background: #000;
-    border: 0;
-    color: #ffe;
-    padding: 1em 2em;
-    font-size: .3em;
-  }
-</style>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-18PREN6V2R"></script>
@@ -24,23 +16,50 @@
 
   gtag('config', 'G-18PREN6V2R');
 </script>
+
+
   </head>
   <body>
     <div id="logo"></div>
+    <div class="form-container">
+      <form
+      method="POST"
+      data-netlify="true"
+      role="form"
+      data-netlify-recaptcha="true">
+          <ul>
+              <li>
+                  <label for="mail"><span>Email, we can reach you on <span class="required-star">*</span></span></label>
+                  <input required type="email" id="mail" name="user_email">
+              </li>
+              <li>
+                  <label for="msg"><span>Describe your project or request</span></label>
+                  <textarea required rows="4" cols="50"></textarea>
+              </li>
+              <li>
+                <div data-netlify-recaptcha="true"></div>
+              </li>
+              <li>
+                  <button type="submit">Send</button>
+
+              </li>
+          </ul>
+      </form>
+  </div>
     <div id="page">
       <header id="header">
         <h1 class="headerTitle">Russet</h1>
         <menu class="headerMenu">
           <a href="#team">Team</a>
           <a href="https://www.linkedin.com/company/russetworks/" target="_blank">LinkedIn</a>
-          <a href="#">Contact</a>
+          <a href="#" id="contact-link">Contact</a>
         </menu>
       </header>
       <section id="hero">
         <div class="content">
           <p>
-            We design and develop experiences that makes people's lives <strong>better</strong>
-            
+            We design and develop <br>experiences that makes people's <br>lives <strong>better</strong>
+            <br>
             <button id="contact-button">Get in touch</button>
           </p>
         </div>
@@ -51,8 +70,13 @@
         </div>
       </section>
     </div>
+
+    
     <footer id="footer">
       <div class="content">Made with love</div>
     </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cash/8.1.1/cash.min.js"></script>
+    <script deferred src="app.js"></script>
   </body>
 </html>
