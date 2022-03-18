@@ -27,6 +27,31 @@
       data-netlify="true"
       role="form"
       data-netlify-recaptcha="true">
+      <svg
+      id="close-form"
+      width="27"
+      height="27"
+      viewBox="0 0 27 27"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M27 13.5C27 20.9558 20.9558 27 13.5 27C6.04416 27 0 20.9558 0 13.5C0 6.04416 6.04416 0 13.5 0C20.9558 0 27 6.04416 27 13.5Z"
+        fill="#C6C6C6"
+      />
+      <path
+        fill-rule="evenodd"
+        clip-rule="evenodd"
+        d="M8.58797 8.58782C8.97849 8.19729 9.61166 8.19729 10.0022 8.58782L18.5935 17.1792C18.9841 17.5697 18.9841 18.2029 18.5935 18.5934C18.203 18.9839 17.5698 18.9839 17.1793 18.5934L8.58797 10.002C8.19744 9.6115 8.19744 8.97834 8.58797 8.58782Z"
+        fill="white"
+      />
+      <path
+        fill-rule="evenodd"
+        clip-rule="evenodd"
+        d="M8.58782 18.5917C8.19729 18.2012 8.19729 17.568 8.58782 17.1775L17.1792 8.58616C17.5697 8.19564 18.2029 8.19564 18.5934 8.58616C18.9839 8.97668 18.9839 9.60985 18.5934 10.0004L10.002 18.5917C9.6115 18.9822 8.97834 18.9822 8.58782 18.5917Z"
+        fill="white"
+      />
+    </svg>
           <ul>
               <li>
                   <label for="mail"><span>Email, we can reach you on <span class="required-star">*</span></span></label>
@@ -34,7 +59,7 @@
               </li>
               <li>
                   <label for="msg"><span>Describe your project or request</span></label>
-                  <textarea required rows="4" cols="50"></textarea>
+                  <textarea id="message" required rows="4" cols="50"></textarea>
               </li>
               <li>
                 <div data-netlify-recaptcha="true"></div>
