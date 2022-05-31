@@ -1,155 +1,91 @@
-@import url("https://fonts.googleapis.com/css2?family=Prata&display=swap");
-/* @import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;700&family=Baloo+Da+2:wght@400;600&family=Prata&family=Turret+Road:wght@400;500;700&display=swap'); */
-@import url("https://fonts.googleapis.com/css2?family=Exo:wght@300;400;500;700;900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;900&family=Teko:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;900&display=swap");
 
 :root {
-  --screen-break: 500px;
-  --russet-color-background: #ffe;
-  --russet-color-text: #555;
-  --russet-page-margins: 2rem;
-  --russet-header-height: 80px;
-
-  --color-mono-1: hsl(230, 8%, 24%);
-  --color-mono-2: hsl(230, 6%, 44%);
-  --color-mono-3: hsl(230, 4%, 64%);
+  --color-background: #fafaea;
+  --color-foreground: #3f3f3f;
+  --color-dot: hsl(230, 4%, 84%);
   --color-cyan: #2580a7;
 
-  --rows: 5;
-  --dot-size: 4vh;
-  --vh: calc(1vh);
-  --vw: 1vw;
+  --dot-size: 1.5rem;
 }
 
 ::selection {
-  color: var(--russet-color-background);
+  color: var(--color-background);
   background-color: var(--color-cyan);
 }
 
-@media (min-height: 500px) {
-  :root {
-    --rows: calc(100 / 2);
-    --dot-size: 2vh;
-  }
-}
-
-html {
-  height: 100%;
-  width: 100%;
-  margin: 0;
-
-  color: var(--russet-color-text);
-  background-color: var(--russet-color-background);
-
-  font-size: clamp(1.24vh, 0.49rem, 2.6667vh);
-  /* font-size: 2.66667vh; */
-}
-
+html,
 body {
   height: 100%;
   width: 100%;
   margin: 0;
-  overflow: hidden;
+}
 
-  animation-name: fadeIn;
-  animation-duration: 0.3s;
+html {
+  color: var(--color-foreground);
+  background-color: var(--color-background);
+  font-size: 16px;
+}
 
+body {
   font-family: "Montserrat", "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell,
     "Open Sans", "Helvetica Neue", sans-serif;
 
-  background-image: radial-gradient(#999 5%, #fff 7%);
+  background-image: radial-gradient(
+    var(--color-dot) 5%,
+    var(--color-background) 7%
+  );
   background-size: var(--dot-size) var(--dot-size);
-  background-position: center bottom;
+  background-position: center top;
+
+  overflow: hidden;
 }
 
 a {
+  color: var(--color-foreground);
   text-decoration: none;
 }
 
-#page {
-  position: relative;
+a:hover {
+  text-decoration: underline;
+}
 
+main {
   display: flex;
   flex-direction: column;
-  height: 100vh;
-
   box-sizing: border-box;
-
-  padding-left: 3vh;
-  color: #000;
+  height: 100%;
+  padding: 1rem 2rem;
+  align-items: stretch;
 }
 
-#header {
-  display: flex;
-  align-items: center;
-  line-height: 1;
-
-  margin-top: calc(3vh + 2px);
-
-  border-bottom: 2px black solid;
-  width: 100%;
-
-  height: calc(var(--dot-size) - 2px);
-}
-
-#header > div {
-  flex: 1;
-}
-
-#footer {
-  line-height: var(--dot-size);
-  margin-bottom: calc(3vh);
-  padding-right: 3vh;
-  /*padding-bottom: 1px;*/
-  /*padding-top: 12px;*/
-}
-
-#footer .content {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-
-.footer-column {
-  display: flex;
-  flex-direction: column;
-}
-
-.title {
-  justify-self: end;
-
-  display: inline-flex;
-  align-items: end;
-  font-weight: 900;
-  font-size: 15vw;
-  letter-spacing: -3px;
+h1 {
+  font-size: 1rem;
+  margin: 0;
   text-transform: uppercase;
-  line-height: 1;
-  margin: 0 0 0 -9px;
-
-  font-family: "Montserrat", "PT Astra Serif", "Open Sans", "Helvetica Neue",
-    sans-serif;
+  text-align: center;
 }
 
-.caption {
-  font-size: inherit;
-  margin: 0;
+header {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  line-height: 0.9;
 }
 
-.subtitle {
-  text-decoration: #555;
-  margin: 0;
-  font-size: 4vw;
+header a {
+  font-size: 80%;
 }
 
-.contacts {
-  display: grid;
-  grid-template-columns: 1fr 4fr;
-  grid-template-rows: 2;
-  column-gap: 12px;
-}
-
-#hero {
+section {
+  font-family: serif;
   flex-grow: 1;
-  padding-top: 12vh;
+  font-size: 2rem;
+  font-style: italic;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 12%;
+
+  flex-direction: column;
 }
